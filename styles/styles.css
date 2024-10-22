@@ -5,6 +5,7 @@
     --accent-color: #fed00f;
 
     --accent-color-25: rgba(254, 208, 15, .25);
+    --font: 'Poppins', sans-serif;
 }
 
 * {
@@ -113,51 +114,6 @@ nav .home-link {
     }
 }
 
-/* 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    position: sticky;
-}
-
-.nav-wrapper {
-    flex-wrap: wrap;
-}
-
-.nav__link {
-    list-style: none;
-    text-align: center;
-    align-items: center;
-}
-
-.nav__link li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav__link li a {
-    transition: all 0.5s ease 0s;
-    text-decoration: none;
-}
-
-.nav__link li a:hover {
-    color: #ffc800;
-}
-
-.logo-img {
-    cursor: pointer;
-}
-
-.col-1 {
-    flex: 1;
-}
-
-.col-2 {
-    flex: 2;
-} */
-
 
 footer {
     background-color: #fed00f;
@@ -168,4 +124,108 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+
+/* ------------ BASE ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+
+
+
+
+    background-color: white;
+}
+
+/* ----------- SLIDER ------------ */
+.swiper {
+    width: 100%;
+    height: 100vh;
+
+    .card {
+        width: 22em;
+        height: 90%;
+        background-color: #fff;
+        border-radius: 2em;
+        box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+        padding: 2em 1em;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin: 0 2em;
+    }
+}
+
+.swiper-wrapper {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+}
+
+.card__image {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    padding: 3px;
+    margin-bottom: 2em;
+}
+
+.card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+}
+
+.card__name {
+    color: var(--accent-color);
+}
+
+.card__text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+
+.card__btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
 }
