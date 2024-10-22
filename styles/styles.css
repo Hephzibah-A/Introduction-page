@@ -157,3 +157,15 @@ nav {
 .col-2 {
     flex: 2;
 } */
+
+
+footer {
+    background-color: #fed00f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
